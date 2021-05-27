@@ -1,8 +1,8 @@
 import React from 'react';
-
+import AddCartButton from '../AddCartButton/AddCartButton'
 import StripeCheckoutButton from '../StripeButton/StripeButton';
 
-function item({param}) {
+function item({param, addToCart}) {
     
     return(
         <div>
@@ -11,6 +11,7 @@ function item({param}) {
                 Cost ${param.totalPrice}
             </p>
             <p>
+            <AddCartButton param={param} addToCart={addToCart}/>
             <StripeCheckoutButton param={param} />
             </p>
         </div>
