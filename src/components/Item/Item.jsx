@@ -6,7 +6,7 @@ function item({param}) {
     
     return(
         <div>
-            <h1>Make Stripe Payment @ Freaky Jolly</h1>
+            <h1>Make Stripe Payment @ {param.name}</h1>
             <p>
                 Pay Total of $ {param.totalPrice}
             </p>
