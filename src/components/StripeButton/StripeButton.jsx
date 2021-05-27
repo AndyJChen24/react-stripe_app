@@ -2,8 +2,8 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 
-const StripeCheckoutButton = ({ price }) => {
-    const priceForStripe = price * 100;
+const StripeCheckoutButton = ({ param }) => {
+    const priceForStripe = param.totalPrice * 100;
     const publishableKey = process.env.publishableKey;
 
     const onToken = token => {
@@ -14,11 +14,11 @@ const StripeCheckoutButton = ({ price }) => {
     return (
         <StripeCheckout
             label='Pay Now'
-            name='Freaky Jolly Co.'
+            name={param.name}
             billingAddress
             shippingAddress
-            image='https://www.freakyjolly.com/wp-content/uploads/2020/04/fj-logo.png'
-            description={`Your total is $${price}`}
+            image={param.image}
+            description={`Your total is $${param.totalPrice}`}
             amount={priceForStripe}
             panelLabel='Pay Now'
             token={onToken}
