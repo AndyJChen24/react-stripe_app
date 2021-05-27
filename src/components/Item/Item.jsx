@@ -6,9 +6,9 @@ function item({param}) {
     
     return(
         <div>
-            <h1>Make Stripe Payment @ {param.name}</h1>
+            <h1>Make Payment for {param.item} @ {param.name}</h1>
             <p>
-                Pay Total of $ {param.totalPrice}
+                Cost ${param.totalPrice}
             </p>
             <p>
             <StripeCheckoutButton param={param} />
