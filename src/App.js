@@ -5,11 +5,15 @@ import './App.css';
 import Item from './components/Item/Item';
 
 function App() {
+ const param = {
+   totalPrice : 58,
+
+ }
 
   return (
     <div className="App">
       <header className="App-header">
-        <Item/>
+        <Item param={param}/>
       </header>
     </div>
   );

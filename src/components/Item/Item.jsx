@@ -2,8 +2,8 @@ import React from 'react';
 
 import StripeCheckoutButton from '../StripeButton/StripeButton';
 
-function item() {
-    const totalPrice =58 ;
+function item({param}) {
+    const totalPrice = param.totalPrice ;
     return(
         <div>
             <h1>Make Stripe Payment @ Freaky Jolly</h1>
